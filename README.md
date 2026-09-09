@@ -33,6 +33,10 @@ Codex Tray Manager 提供一个统一的托盘入口，并把“这是应用自�
 
 ## 快速开始
 
+普通用户可以从 [Releases](https://github.com/son-gladyso/codex-tray-manager/releases) 下载 Windows 便携版 ZIP，解压后将 `manager.settings.example.json` 复制为 `manager.settings.json` 并填写本机路径。
+
+开发者也可以克隆仓库：
+
 ```powershell
 git clone https://github.com/son-gladyso/codex-tray-manager.git
 cd codex-tray-manager

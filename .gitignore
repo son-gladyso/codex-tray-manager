@@ -8,6 +8,7 @@ startup-error*.log
 # Local review and deployment artifacts
 backups/
 validation/
+dist/
 HANDOFF.md
 RELEASE_REPORT.md
 CACHE_REVIEW.md
