@@ -52,7 +52,7 @@ Assert-Set $plan.RootProcessIds @(109) 'Windows argument parsing supports quoted
 $std = New-Fixture 500 1 'ChatGPT.exe' 'ChatGPT.exe --user-data-dir=D:\codex25\codex-desktop-userdata'
 $ui = New-Fixture 600 1 'ChatGPT.exe' 'ChatGPT.exe --user-data-dir=D:\codex25\ui-canary-state-26.810.7004.0\codex-desktop-userdata'
 $state25 = Get-CodexInstanceStates -Numbers @(25) -Processes @($std,$ui)
-Assert-Set $state25.ActiveVariants @('Standard','UICanary') 'Codex 25 intentionally aggregates both user-requested versions'
+Assert-Set $state25.ActiveVariants @('Standard','UICanary') 'An instance can aggregate standard and canary variants'
 Assert-True ($state25.ProcessCount -eq 2) 'Merged Codex 25 count includes both versions'
 $states = @(Get-CodexInstanceStates -Numbers @(4,5) -Processes $fixture)
 Assert-True ($states[0].ProcessCount -eq 4 -and $states[1].ProcessCount -eq 1) 'Shared snapshot isolates instance counts'
@@ -156,6 +156,7 @@ Import-Module $modulePath -Force
 $module = Get-Module CodexTrayManager.Core
 & $module {
     function script:Get-CodexProcessSnapshot { @() }
+    function script:Test-Path { param($LiteralPath); return $true }
     function script:Start-Process {
         $p = [pscustomobject]@{ HasExited=$true; ExitCode=9 }
         $p | Add-Member -MemberType ScriptMethod -Name Refresh -Value {}
