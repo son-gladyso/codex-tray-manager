@@ -1,0 +1,20 @@
+# Per-machine configuration
+manager.settings.json
+
+# Runtime output
+logs/
+startup-error*.log
+
+# Local review and deployment artifacts
+backups/
+validation/
+HANDOFF.md
+RELEASE_REPORT.md
+CACHE_REVIEW.md
+
+# PowerShell/editor noise
+*.clixml
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

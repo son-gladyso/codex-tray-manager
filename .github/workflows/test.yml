@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  powershell:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare example configuration
+        shell: pwsh
+        run: Copy-Item manager.settings.example.json manager.settings.json
+      - name: Run behavioral checks
+        shell: pwsh
+        run: ./tests/Test-CodexTrayManager.ps1

@@ -1,0 +1,47 @@
+{
+  "SchemaVersion": 1,
+  "PollIdleSeconds": 10,
+  "PollMenuSeconds": 2,
+  "StartupTimeoutSeconds": 20,
+  "IconPath": "D:\\codex4\\CodexDesktopApp\\resources\\codex-tray.ico",
+  "Instances": [
+    {
+      "Number": 4,
+      "Name": "Codex Work",
+      "Variants": [
+        {
+          "Name": "Standard",
+          "Launcher": "D:\\codex4\\launch-codex4-isolated.ps1",
+          "UserDataPath": "D:\\codex4\\codex-desktop-userdata"
+        }
+      ]
+    },
+    {
+      "Number": 5,
+      "Name": "Codex Personal",
+      "Variants": [
+        {
+          "Name": "Standard",
+          "Launcher": "D:\\codex5\\launch-codex5-isolated.ps1",
+          "UserDataPath": "D:\\codex5\\codex-desktop-userdata"
+        }
+      ]
+    },
+    {
+      "Number": 25,
+      "Name": "Codex Preview",
+      "Variants": [
+        {
+          "Name": "Standard",
+          "Launcher": "D:\\codex25\\launch-codex25-isolated.ps1",
+          "UserDataPath": "D:\\codex25\\codex-desktop-userdata"
+        },
+        {
+          "Name": "UICanary",
+          "Launcher": "D:\\codex25\\launch-codex25-ui-canary.ps1",
+          "UserDataPath": "D:\\codex25\\ui-canary-state-26.810.7004.0\\codex-desktop-userdata"
+        }
+      ]
+    }
+  ]
+}
