@@ -1,5 +1,7 @@
 # Codex Tray Manager
 
+[简体中文](README.md) · [English](docs/i18n/README.en.md) · [日本語](docs/i18n/README.ja.md) · [한국어](docs/i18n/README.ko.md) · [Español](docs/i18n/README.es.md) · [Français](docs/i18n/README.fr.md) · [Deutsch](docs/i18n/README.de.md) · [Português (Brasil)](docs/i18n/README.pt-BR.md)
+
 **多个 Codex 实例，一个托盘入口。找到窗口、看清后台，再决定如何关闭。**
 
 面向已经在 Windows 上使用隔离启动脚本的用户，Codex Tray Manager 把启动、切换、重启和关闭集中起来，减少在任务栏、脚本和任务管理器之间来回寻找。它管理现有实例，不负责创建账号、迁移聊天或替你搭建隔离环境。
